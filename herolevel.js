@@ -1,23 +1,36 @@
-let nome = "Cassius "
-let xp = "8500"
+let nome = "Cassius ";
+let xp = 1;
+let xpPorCiclo = 1000;
 let nivel;
 
-if (xp < "1000"){
-    nivel = "Ferro"
-}else if (xp <= "2000"){
-    nivel = "Bronze"
-}else if (xp  <= "5000"){
-    nivel = "Prata"
-}else if (xp <= "7000"){
-    nivel = "Ouro"
-}else if (xp <= "8000"){
-    nivel = "Platina"
-}else if (xp <= "9000"){
-    nivel = "Ascendente"
-}else if (xp <= "10000"){
-    nivel = "Imortal"
-}else if (xp >= "10001"){
-    nivel = "Radiante"
+while (nivel !== "Grão-Mestre") {
+
+    console.log("Explorando o território...");
+    xp += xpPorCiclo;
+    console.log(`XP atual: ${xp}`);
+
+    if (xp < 1000){
+        nivel = "Aprendiz"
+    }else if (xp <= 2000){
+        nivel = "Escudeiro"
+    }else if (xp <= 5000){
+        nivel = "Arauto"
+    }else if (xp <= 7000){
+        nivel = "Campeão"
+    }else if (xp <= 8000){
+        nivel = "Guardião"
+    }else if (xp <= 9000){
+        nivel = "Ascendente"
+    }else if (xp <= 10000){
+        nivel = "Imortal"
+    }else {
+        nivel = "Grão-Mestre"
+    }
+
+    console.log(`Nível atual: ${nivel}`);
 }
 
-console.log("O Herói de nome " + nome + "está no nível " + nivel)
+console.log(`O Herói de nome ${nome} alcançou o nível máximo: ${nivel}!`);
+console.log("Recompensa: Coroa de Vitória e 1.000 moedas de ouro!");
+
+
